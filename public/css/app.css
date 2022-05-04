@@ -9931,6 +9931,7 @@ h3 {
 :root {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9967,6 +9968,12 @@ body #hero a.btn span:first-child {
 }
 body #hero a.btn span:last-child {
   font-size: x-small;
+}
+body #assets-preview {
+  min-height: 600vw;
+}
+body #assets-preview .item-preview-element a.first {
+  position: absolute;
 }
 body #assets-preview .item-box {
   position: relative;
@@ -10071,6 +10078,12 @@ body #item-details .col-item-text .item-text .item-text-square {
   body #hero a.btn {
     align-self: center;
   }
+  body #assets-preview {
+    min-height: 80vw;
+  }
+  body #assets-preview .item-preview-element a.second, body #assets-preview .item-preview-element a.third {
+    position: absolute;
+  }
   body #assets-preview .item-box {
     width: 25vw;
     margin-bottom: 35vw;
@@ -10128,6 +10141,12 @@ body #item-details .col-item-text .item-text .item-text-square {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  body #assets-preview {
+    min-height: 180vw;
+  }
+  body #assets-preview a.second {
+    position: absolute;
+  }
   body #assets-preview .item-box {
     width: 40vw;
     margin-bottom: 50vw;

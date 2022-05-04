@@ -2,7 +2,7 @@
 :root{
     margin: 0;
     padding: 0;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 };
 body{
     // position: relative;
@@ -42,7 +42,12 @@ body{
         };
     };
     #assets-preview{
-        
+        min-height: 600vw;
+        .item-preview-element{
+            a.first{
+                position: absolute;
+            };
+        };
         .item-box{
             position: relative;
             width: 70vw;
