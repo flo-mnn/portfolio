@@ -59,6 +59,8 @@ for (let i = 0; i < allItems.length; i++) {
     newItem.classList.remove("item-preview-template");
     newItem.classList.add('item-preview-element');
     newItem.id = `${el.title}`;
+    let babyBugBox = newItem.querySelector('.item-box');
+    babyBugBox.id = `${el.title}`;
     let img = newItem.querySelector("img");
     img.src = `public/img/campaigns/${el.cover}`;
     let title = newItem.querySelector(".campaign-name");
@@ -70,7 +72,7 @@ for (let i = 0; i < allItems.length; i++) {
 }
 
 let allPreviewItems = document.querySelectorAll('.item-preview-element');
-
+let assetsPreviewBox = document.getElementById('assets-preview');
 let previewItems = assetsPreviewBox.querySelectorAll('.item-box');
 
 // display right item on click (part1)
@@ -87,6 +89,7 @@ for (let i = 0; i < previewItems.length; i++) {
                 itemToDisplay = element;
             };
         };
+        // console.log(itemToDisplay);
     });
 }
 // for (let i = 0; i < allPreviewItems.length; i++) {
@@ -174,7 +177,8 @@ let displayItem = () => {
   
 };
 
-let backToPortfolio = () => {
+let backToPortfolio = (e) => {
+    e.stopPropagation()
     for (let i = 0; i < allSections.length; i++) {
         const el = allSections[i];
         el.classList.remove('d-none');
@@ -204,7 +208,6 @@ let desktop = window.matchMedia("(min-width: 992px)");
 // size screens
 
 let body = document.querySelector('body');
-let assetsPreviewBox = document.getElementById('assets-preview');
 
 
 let screenSize = () => {
@@ -244,7 +247,7 @@ let screenSize = () => {
             const el = previewItems[i];
             el.addEventListener("click",function(e){
                 if(!el.classList.contains('hovered')){
-                    // e.preventDefault();
+                    e.stopPropagation();
                     // remove hovered from others
                     for (let a = 0; a < previewItems.length; a++) {
                         const element = previewItems[a];
