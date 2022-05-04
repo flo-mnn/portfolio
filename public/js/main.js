@@ -71,13 +71,14 @@ for (let i = 0; i < allItems.length; i++) {
 
 let allPreviewItems = document.querySelectorAll('.item-preview-element');
 
+let previewItems = assetsPreviewBox.querySelectorAll('.item-box');
 
 // display right item on click (part1)
 let itemToDisplay = null;
 
 // ici seulement recuperation de quel object, reste dans screensize + function displayItem
-for (let i = 0; i < allPreviewItems.length; i++) {
-    const el = allPreviewItems[i];
+for (let i = 0; i < previewItems.length; i++) {
+    const el = previewItems[i];
     el.addEventListener("click",function(e){
         let itemId = this.id;
         for (let i = 0; i < allItems.length; i++) {
@@ -88,6 +89,18 @@ for (let i = 0; i < allPreviewItems.length; i++) {
         };
     });
 }
+// for (let i = 0; i < allPreviewItems.length; i++) {
+//     const el = allPreviewItems[i];
+//     el.addEventListener("click",function(e){
+//         let itemId = this.id;
+//         for (let i = 0; i < allItems.length; i++) {
+//             const element = allItems[i];
+//             if (element.title == itemId) {
+//                 itemToDisplay = element;
+//             };
+//         };
+//     });
+// }
 
 // assets page variables for carousel slides + text
 let carouselSlide = document.querySelector('.carousel-item-template');
@@ -192,7 +205,6 @@ let desktop = window.matchMedia("(min-width: 992px)");
 
 let body = document.querySelector('body');
 let assetsPreviewBox = document.getElementById('assets-preview');
-let previewItems = assetsPreviewBox.querySelectorAll('.item-box');
 
 
 let screenSize = () => {
@@ -226,7 +238,7 @@ let screenSize = () => {
 
     } else if (tablet.matches) {
         // tablet and mobile?
-
+        
         // fake hover effect on touch screens (small sizes)
         for (let i = 0; i < previewItems.length; i++) {
             const el = previewItems[i];
