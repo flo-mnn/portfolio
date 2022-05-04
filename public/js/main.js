@@ -113,6 +113,12 @@ let carouselOl = assetsDetail.querySelector('#carousel-assets').querySelector('.
 let itemDetailDescription = assetsDetail.querySelector('.inner-text');
 
 let displayItem = () => {
+    // trying to solve bug by emptying item detail side before displaying again as well
+    carouselOl.textContent="";
+    slideBox.textContent="";
+    itemDetailDescription.textContent="";
+
+    // 
     for (let i = 0; i < allSections.length; i++) {
         const el = allSections[i];
         el.classList.add('d-none');
@@ -212,6 +218,7 @@ let body = document.querySelector('body');
 
 let screenSize = () => {
     if (desktop.matches) {
+        // console.log('desktop matches');
         // mouseenter/mouseleave hover effect
         for (let i = 0; i < previewItems.length; i++) {
             const el = previewItems[i];
@@ -241,13 +248,13 @@ let screenSize = () => {
 
     } else if (tablet.matches) {
         // tablet and mobile?
-        
+        // console.log('smart and tab matches');
         // fake hover effect on touch screens (small sizes)
         for (let i = 0; i < previewItems.length; i++) {
             const el = previewItems[i];
             el.addEventListener("click",function(e){
                 if(!el.classList.contains('hovered')){
-                    e.stopPropagation();
+                    // e.stopPropagation();
                     // remove hovered from others
                     for (let a = 0; a < previewItems.length; a++) {
                         const element = previewItems[a];
@@ -270,7 +277,7 @@ let screenSize = () => {
         
       };
     };
-  }
+  };
   
   
 window.addEventListener('resize',function() {
