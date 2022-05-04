@@ -189,7 +189,14 @@ let backToPortfolio = (e) => {
         const el = allSections[i];
         el.classList.remove('d-none');
     };
+    // cleaning 'hovered'
+    for (let i = 0; i < previewItems.length; i++) {
+        const el = previewItems[i];
+            el.classList.remove('hovered');
+    };
+    // resuming
     assetsDetail.classList.add('d-none');
+    // emptying
     carouselOl.innerHTML=null;
     slideBox.innerHTML=null;
     itemDetailDescription.innerHTML=null;
