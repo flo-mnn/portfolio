@@ -20,8 +20,7 @@
 <body>
     
     <section id="item-details" class="">
-        <a href="https://flo-mnn.github.io/portfolio/" class="text-warning mx-3" style="text-decoration: underline;">back</a>
-        <div class="row mx-0 mt-5">
+        <button onclick="history.back()" class="text-warning mx-3" style="text-decoration: underline; background-color: transparent; border: none;">back</button>        <div class="row mx-0 mt-5">
             <div class="col-12">
                 <img src="" alt="" class="logo" id="client-logo">
                 <div class="head my-4">
@@ -43,6 +42,14 @@
                         </div>
                       
                     </div>
+                    <a class="carousel-control-prev" href="#carousel-assets" role="button" data-slide="prev" style="width: 5% !important;">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carousel-assets" role="button" data-slide="next" style="width: 5% !important;">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
                   </div>
 
             </div>
@@ -57,7 +64,7 @@
                 </div>
             </div>
             <div class="col-12 my-3 text-lg-center">
-                <a href="https://flo-mnn.github.io/portfolio/" class="my-5 btn btn-warning backportfolio">back to porfolio</a>
+                <button onclick="history.back()" class="my-5 btn btn-warning backportfolio" >back to portfolio</button>
             </div>
         </div>
     </section>

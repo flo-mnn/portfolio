@@ -14,12 +14,9 @@
       };
     };
     #assets-preview{
-      min-height: 80vw;
-      .item-preview-element{
-        a.second,a.third{
-            position: absolute;
-        };
-    };
+      .col-12{
+        height: auto;
+      };
       .item-box{
           width: 25vw;
           margin-bottom: 35vw;
@@ -87,9 +84,8 @@
 @media screen and (min-width: 768px) and (max-width: 991px){
   body{
     #assets-preview{
-      min-height: 180vw;
-      a.second{
-        position: absolute;
+      .col-12{
+        height: auto;
       };
       .item-box{
           width: 40vw;

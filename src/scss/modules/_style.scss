@@ -42,11 +42,14 @@ body{
         };
     };
     #assets-preview{
-        min-height: 600vw;
-        .item-preview-element{
-            a.first{
-                position: absolute;
-            };
+       
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        };
+        .col-12{
+            height: 100vw;
         };
         .item-box{
             position: relative;
